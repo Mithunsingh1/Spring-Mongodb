@@ -2,14 +2,43 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Employee Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        a:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h2>Employee Details</h2>
-    <p><strong>ID:</strong> <span th:text="${employee.id}"></span></p>
-    <p><strong>Name:</strong> <span th:text="${employee.name}"></span></p>
-    <p><strong>Email:</strong> <span th:text="${employee.email}"></span></p>
-    <p><strong>Location:</strong> <span th:text="${employee.location}"></span></p>
-    <br>
-    <a href="/displayAll">Back to Employee List</a>
+    <div class="container">
+        <h2>Employee Details</h2>
+        <p><strong>ID:</strong> <span th:text="${employee.id}"></span></p>
+        <p><strong>Name:</strong> <span th:text="${employee.name}"></span></p>
+        <p><strong>Email:</strong> <span th:text="${employee.email}"></span></p>
+        <p><strong>Location:</strong> <span th:text="${employee.location}"></span></p>
+        <br>
+        <a href="/displayAll">Back to Employee List</a>
+    </div>
 </body>
 </html>
